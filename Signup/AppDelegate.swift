@@ -29,6 +29,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         // PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        let userName: String? = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
+        
+        if userName != nil {
+            
+            // Navigate to protected page
+            
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            var mainPage: MainPageViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("MainPageViewController") as! MainPageViewController
+            
+            var mainPageNav = UINavigationController(rootViewController: mainPage)
+            
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDelegate.window?.rootViewController = mainPageNav
+        }
+        
+        
+
+        
         return true
     }
 

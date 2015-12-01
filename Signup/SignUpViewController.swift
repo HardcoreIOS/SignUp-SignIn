@@ -3,7 +3,7 @@
 //  Signup
 //
 //  Created by Abdurrahman on 11/24/15.
-//  Copyright © 2015 Hafiz Developer. All rights reserved.
+//  Copyright © 2015 Hardcore IOS. All rights reserved.
 //
 
 import UIKit
@@ -43,22 +43,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         profilePhotoImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -66,8 +50,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
-    
-    
+	
     @IBAction func cancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -110,7 +93,19 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             return
         }
         
-        let imageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
+        var imageData = UIImageJPEGRepresentation(profilePhotoImageView.image!, 1)
+        
+        if let profileImage = profilePhotoImageView.image {
+            
+            imageData = UIImageJPEGRepresentation(profileImage,1)
+            
+        } else {
+            let alertController = UIAlertController(title: "Error", message: "Please choose an Image for your profile", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "ok!", style: .Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        
         
         let user: PFUser = PFUser()
         user.username = userName
@@ -145,8 +140,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             }
             
-            let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-            alertController.addAction(UIAlertAction(title: "", style: .Default, handler: { (alert: UIAlertAction) -> Void in
+            let alertController = UIAlertController(title: "Success", message: "Registration was successful", preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK!", style: .Default, handler: { (alert: UIAlertAction) -> Void in
                 
                 if success {
                     
@@ -160,16 +155,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
        
         
         }
-        
-        
-        
-        
-        
     
     }// End of signUp Pressed
-    
-
-
-    
-    
+	
 }

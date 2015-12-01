@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155FF8CD1C07A0B2005F607B /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155FF8CC1C07A0B2005F607B /* MainPageViewController.swift */; };
+		155FF8D81C07B9E8005F607B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 155FF8D01C07B9E8005F607B /* MMDrawerBarButtonItem.m */; };
+		155FF8D91C07B9E8005F607B /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155FF8D21C07B9E8005F607B /* MMDrawerController.m */; };
+		155FF8DA1C07B9E8005F607B /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 155FF8D51C07B9E8005F607B /* MMDrawerVisualState.m */; };
+		155FF8DB1C07B9E8005F607B /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155FF8D71C07B9E8005F607B /* UIViewController+MMDrawerController.m */; };
 		156FE7791C049097007FF20D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156FE7781C049097007FF20D /* AppDelegate.swift */; };
 		156FE77B1C049097007FF20D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156FE77A1C049097007FF20D /* ViewController.swift */; };
 		156FE77E1C049097007FF20D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156FE77C1C049097007FF20D /* Main.storyboard */; };
@@ -34,6 +39,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155FF8CC1C07A0B2005F607B /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		155FF8CE1C07B9E7005F607B /* Signup-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Signup-Bridging-Header.h"; sourceTree = "<group>"; };
+		155FF8CF1C07B9E8005F607B /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		155FF8D01C07B9E8005F607B /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		155FF8D11C07B9E8005F607B /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		155FF8D21C07B9E8005F607B /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		155FF8D31C07B9E8005F607B /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		155FF8D41C07B9E8005F607B /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		155FF8D51C07B9E8005F607B /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		155FF8D61C07B9E8005F607B /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		155FF8D71C07B9E8005F607B /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		156FE7751C049097007FF20D /* Signup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156FE7781C049097007FF20D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156FE77A1C049097007FF20D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,21 +126,32 @@
 		156FE7771C049097007FF20D /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				15EF4A2F1C052F6900912C83 /* FrameWorks */,
+				15EF4A2F1C052F6900912C83 /* FrameWorks and Headers */,
 				156FE7781C049097007FF20D /* AppDelegate.swift */,
 				156FE77A1C049097007FF20D /* ViewController.swift */,
 				15EF4A541C0531E500912C83 /* SignUpViewController.swift */,
+				155FF8CC1C07A0B2005F607B /* MainPageViewController.swift */,
 				156FE77C1C049097007FF20D /* Main.storyboard */,
 				156FE77F1C049097007FF20D /* Assets.xcassets */,
 				156FE7811C049097007FF20D /* LaunchScreen.storyboard */,
+				155FF8CE1C07B9E7005F607B /* Signup-Bridging-Header.h */,
 				156FE7841C049097007FF20D /* Info.plist */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
 		};
-		15EF4A2F1C052F6900912C83 /* FrameWorks */ = {
+		15EF4A2F1C052F6900912C83 /* FrameWorks and Headers */ = {
 			isa = PBXGroup;
 			children = (
+				155FF8CF1C07B9E8005F607B /* MMDrawerBarButtonItem.h */,
+				155FF8D01C07B9E8005F607B /* MMDrawerBarButtonItem.m */,
+				155FF8D11C07B9E8005F607B /* MMDrawerController.h */,
+				155FF8D21C07B9E8005F607B /* MMDrawerController.m */,
+				155FF8D31C07B9E8005F607B /* MMDrawerController+Subclass.h */,
+				155FF8D41C07B9E8005F607B /* MMDrawerVisualState.h */,
+				155FF8D51C07B9E8005F607B /* MMDrawerVisualState.m */,
+				155FF8D61C07B9E8005F607B /* UIViewController+MMDrawerController.h */,
+				155FF8D71C07B9E8005F607B /* UIViewController+MMDrawerController.m */,
 				15EF4A521C05309E00912C83 /* Social.framework */,
 				15EF4A501C05309500912C83 /* Accounts.framework */,
 				15EF4A4E1C05309000912C83 /* libsqlite3.tbd */,
@@ -144,7 +171,7 @@
 				15EF4A341C052F8300912C83 /* ParseTwitterUtils.framework */,
 				15EF4A351C052F8300912C83 /* ParseUI.framework */,
 			);
-			name = FrameWorks;
+			name = "FrameWorks and Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155FF8CD1C07A0B2005F607B /* MainPageViewController.swift in Sources */,
 				15EF4A551C0531E500912C83 /* SignUpViewController.swift in Sources */,
+				155FF8D81C07B9E8005F607B /* MMDrawerBarButtonItem.m in Sources */,
+				155FF8DB1C07B9E8005F607B /* UIViewController+MMDrawerController.m in Sources */,
 				156FE77B1C049097007FF20D /* ViewController.swift in Sources */,
+				155FF8D91C07B9E8005F607B /* MMDrawerController.m in Sources */,
 				156FE7791C049097007FF20D /* AppDelegate.swift in Sources */,
+				155FF8DA1C07B9E8005F607B /* MMDrawerVisualState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Signup",
@@ -339,6 +372,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abdurrahman.Signup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Signup/Signup-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Signup",
@@ -354,6 +390,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Abdurrahman.Signup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Signup/Signup-Bridging-Header.h";
 			};
 			name = Release;
 		};

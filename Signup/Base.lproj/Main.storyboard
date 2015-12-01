@@ -37,8 +37,8 @@
                                     <constraint firstAttribute="width" constant="255" id="tbF-cj-lB0"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Eed-ni-PyM">
                                 <rect key="frame" x="45" y="268" width="255" height="33"/>
@@ -49,8 +49,8 @@
                                     <constraint firstAttribute="width" constant="255" id="gHE-OR-ydi"/>
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8K-4i-lJJ">
                                 <rect key="frame" x="60" y="415" width="151" height="28"/>
@@ -89,6 +89,9 @@
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.0" green="0.81150112539999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gc1-6b-5dr"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password icon" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-5q-dTf">
                                 <rect key="frame" x="8" y="268" width="31" height="33"/>
@@ -142,12 +145,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="emailAddressTextField" destination="EL0-6k-2n3" id="kqe-r7-RbY"/>
                         <outlet property="loginOutlet" destination="IUC-IH-gYT" id="fqz-xi-7Wj"/>
+                        <outlet property="passwordTextField" destination="Eed-ni-PyM" id="W2p-xh-D11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="389"/>
+            <point key="canvasLocation" x="434" y="337"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="VYV-AJ-JW5">
@@ -204,7 +209,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password(Required at Login)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tqh-66-kEW">
                                 <rect key="frame" x="45" y="330" width="255" height="30"/>
@@ -261,7 +266,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name(Not Required at Login)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-8b-tZU">
                                 <rect key="frame" x="45" y="454" width="255" height="30"/>
@@ -272,7 +277,7 @@
                                 </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Username Icon Copy" translatesAutoresizingMaskIntoConstraints="NO" id="qrA-Fb-R58">
                                 <rect key="frame" x="8" y="410" width="31" height="33"/>
@@ -406,7 +411,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJ4-bJ-597" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="803" y="389"/>
+            <point key="canvasLocation" x="817" y="344"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="G0m-gr-9E3">
+            <objects>
+                <viewController storyboardIdentifier="MainPageViewController" id="ASg-HQ-JfE" customClass="MainPageViewController" customModule="Signup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VT3-6C-IKW"/>
+                        <viewControllerLayoutGuide type="bottom" id="91i-Rt-SXs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xRI-x6-PqO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="eP2-4J-ajy"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuD-Kj-xet" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="1005"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s2a-Lg-LO2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="04o-8w-3gh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zBj-Zb-uH2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.2274509804" green="0.70588235290000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ASg-HQ-JfE" kind="relationship" relationship="rootViewController" id="Io6-HH-gfU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeD-AU-1S5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="620" y="1005"/>
         </scene>
     </scenes>
     <resources>
